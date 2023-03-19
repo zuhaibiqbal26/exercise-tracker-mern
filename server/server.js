@@ -168,3 +168,5 @@ app.delete("/exercise/:id", async(req,res)=>{
 app.delete("/exercise/exName",(req,res)=>{})
 
 app.listen(5000, ()=>console.log("Server running on port 5000"))
+
+module.exports = app;

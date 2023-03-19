@@ -68,7 +68,7 @@ export default function Register() {
       />
       <br />
       <input className='formBtn' type="submit" value="REGISTER" />
-      <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" fontSize="12px" color="#505050" variant="p" component="p" mt={2}>Already have an account? <Link to='/login' style={{color:"#000000"}}> Login.</Link></Typography>
+      <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" fontSize="12px" color="#505050" variant="p" component="p" mt={2}>Already have an account? <Link to='/' style={{color:"#000000"}}> Login.</Link></Typography>
 
     </form>
     </div>
