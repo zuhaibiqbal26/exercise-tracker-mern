@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Typography } from '@mui/material';
+require("dotenv").config();
 
 export default function AddExercise() {
     const [title, setTitle] = useState("")
@@ -10,7 +11,7 @@ export default function AddExercise() {
     async function handleSubmit(e){
         e.preventDefault()
         try{
-            const result = await fetch("http://localhost:5000/exercise/addexercise",
+            const result = await fetch(process.env.HOST_URL+"/exercise/addexercise",
             {
                 method:"POST",
                 headers:{

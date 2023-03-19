@@ -4,7 +4,7 @@ import background from "../media/bg.png"
 import logo from "../media/logo2.png";
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom';
-
+require("dotenv").config();
 
 
 export default function Login() {
@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault()
 
         try{
-            const result = await fetch("http://localhost:5000/login",
+            const result = await fetch(process.env.HOST_URL+"/login",
             {
 
                 method:"POST",

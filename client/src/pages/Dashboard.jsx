@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import AddExercise from "./AddExercise";
 import EditExercise from "./EditExercise";
+require("dotenv").config();
 
 export default function Dashboard() {
   let count = 0;
@@ -16,7 +17,7 @@ export default function Dashboard() {
   const [loggedName, setLoggedName] = useState("Name")
 
   async function getExercises() {
-    const result = await fetch("http://localhost:5000/exercise/getexercise", {
+    const result = await fetch(process.env.HOST_URL+"/exercise/getexercise", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

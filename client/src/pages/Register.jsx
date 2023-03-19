@@ -4,6 +4,7 @@ import background from "../media/bg.png"
 import logo from "../media/logo2.png";
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom';
+require("dotenv").config();
 
 
 export default function Register() {
@@ -14,7 +15,7 @@ export default function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const result = await fetch("http://localhost:5000/register", {
+      const result = await fetch(process.env.HOST_URL+"/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
+require("dotenv").config();
 
 
 export default function EditExercise() {
@@ -20,7 +21,7 @@ export default function EditExercise() {
 
     async function fetchExercise(id){
         try{
-            const result = await fetch("http://localhost:5000/exercise/"+id,
+            const result = await fetch(process.env.HOST_URL+"/exercise/"+id,
             {
                 method:"GET",
                 headers:{
