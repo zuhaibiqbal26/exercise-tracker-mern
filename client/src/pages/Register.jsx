@@ -54,6 +54,7 @@ export default function Register() {
       <br />
       <input
         placeholder="Enter Email"
+        type="email"
         value={email}
         onChange={(e) => {
           setEmail(e.target.value);
@@ -61,7 +62,8 @@ export default function Register() {
       />
       <br />
       <input
-        placeholder="Enter password"
+        placeholder="Enter password" 
+        type="password"
         value={password}
         onChange={(e) => {
           setPassword(e.target.value);

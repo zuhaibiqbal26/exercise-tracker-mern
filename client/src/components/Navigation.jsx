@@ -27,7 +27,7 @@ export default function Navigation({ login }) {
         <li style={{marginTop:"10px"}}><NavLink className='navli' to="/addexercise" activeClassName="active-link"><DirectionsRunIcon style={{margin:"0px 10px 3px 10px"}}/><span>Add Exercise</span></NavLink></li>
         <li style={{marginTop:"400px"}}><Link className="navli" onClick={() => {
               localStorage.clear("Token");
-              window.location.replace("/login");
+              window.location.replace("/");
             }}><LogoutIcon style={{margin:"0px 15px 3px 10px"}}/><span>Logout</span></Link></li>
       </ul>
       {/* <List>

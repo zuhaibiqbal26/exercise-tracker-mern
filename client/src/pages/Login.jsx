@@ -45,8 +45,8 @@ export default function Login() {
     <form className='form' onSubmit={handleSubmit}>
         <Typography fontFamily="'Montserrat', sans-serif" fontWeight="700" variant="h4" component="h4">LOGIN NOW</Typography>
         <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" variant="p" component="p" mb={4}>to track and manage your healthy life</Typography>
-        <input placeholder='Enter Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/>
-        <input placeholder='Enter password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/>
+        <input type="email" placeholder='Enter Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/>
+        <input type="password" placeholder='Enter password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/>
         <input className='formBtn' type="submit" value="LOGIN"/>
         <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" fontSize="12px" color="#505050" variant="p" component="p" mt={2}>Don’t have an account? <Link to='/register' style={{color:"#000000"}}> Create a new one.</Link></Typography>
 
