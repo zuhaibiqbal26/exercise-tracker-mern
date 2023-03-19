@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
-require("dotenv").config();
+ 
 
 
 export default function EditExercise() {

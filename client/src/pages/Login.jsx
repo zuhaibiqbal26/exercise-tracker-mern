@@ -4,7 +4,7 @@ import background from "../media/bg.png"
 import logo from "../media/logo2.png";
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom';
-require("dotenv").config();
+ 
 
 
 export default function Login() {

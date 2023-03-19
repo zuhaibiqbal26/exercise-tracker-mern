@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Typography } from '@mui/material';
-require("dotenv").config();
+ 
 
 export default function AddExercise() {
     const [title, setTitle] = useState("")

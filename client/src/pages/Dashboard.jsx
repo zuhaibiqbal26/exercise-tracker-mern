@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import AddExercise from "./AddExercise";
 import EditExercise from "./EditExercise";
-require("dotenv").config();
+ 
 
 export default function Dashboard() {
   let count = 0;
