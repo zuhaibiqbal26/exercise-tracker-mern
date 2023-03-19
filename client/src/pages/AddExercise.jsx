@@ -11,7 +11,7 @@ export default function AddExercise() {
     async function handleSubmit(e){
         e.preventDefault()
         try{
-            const result = await fetch(process.env.HOST_URL+"/exercise/addexercise",
+            const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/addexercise",
             {
                 method:"POST",
                 headers:{

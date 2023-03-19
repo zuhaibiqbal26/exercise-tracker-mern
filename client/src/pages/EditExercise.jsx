@@ -21,7 +21,7 @@ export default function EditExercise() {
 
     async function fetchExercise(id){
         try{
-            const result = await fetch(process.env.HOST_URL+"/exercise/"+id,
+            const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/"+id,
             {
                 method:"GET",
                 headers:{
@@ -55,7 +55,7 @@ useEffect(()=>{
     async function handleSubmit(e){
         e.preventDefault()
         try{
-            const result = await fetch("http://localhost:5000/exercise/"+id,
+            const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/"+id,
             {
                 method:"PUT",
                 headers:{

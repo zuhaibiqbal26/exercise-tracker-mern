@@ -15,7 +15,7 @@ export default function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const result = await fetch(process.env.HOST_URL+"/register", {
+      const result = await fetch(process.env.REACT_APP_HOST_URL+"/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

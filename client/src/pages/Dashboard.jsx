@@ -17,7 +17,7 @@ export default function Dashboard() {
   const [loggedName, setLoggedName] = useState("Name")
 
   async function getExercises() {
-    const result = await fetch(process.env.HOST_URL+"/exercise/getexercise", {
+    const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/getexercise", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function Dashboard() {
   async function onDelete(id){
     
     console.log("this is onDelete id"+id)
-    const result = await fetch("http://localhost:5000/exercise/"+id, {
+    const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/"+id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

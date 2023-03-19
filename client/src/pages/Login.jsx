@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault()
 
         try{
-            const result = await fetch(process.env.HOST_URL+"/login",
+            const result = await fetch(process.env.REACT_APP_HOST_URL+"/login",
             {
 
                 method:"POST",
