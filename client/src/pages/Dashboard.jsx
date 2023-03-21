@@ -3,18 +3,22 @@ import { Typography } from "@mui/material";
 import BasicCard from "../components/Card";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import AddExercise from "./AddExercise";
-import EditExercise from "./EditExercise";
  
 
 export default function Dashboard() {
-  let count = 0;
-  // const [title, setTitle] = useState(0);
-  // const [des, setDes] = useState(0);
-  // const [type, setType] = useState(0);
-  // const [duration, setDuration] = useState(0);
   const [exercises, setExercises] = useState([]);
-  const [loggedName, setLoggedName] = useState("Name")
+  const [loggedName, setLoggedName] = useState("")
+  const [greet, setGreet] = useState("")
+
+  function hour(){
+    // let hour = new Date("July 21, 1983 1:15:00").getHours()
+    let hour = new Date().getHours()
+  if(hour>12 && hour<19){setGreet("Good evening")}
+  else if(hour<12 && hour>5){setGreet("Good Morning")}
+  else if(hour>19){setGreet("Good Night")}
+  else if(hour===12){setGreet("Good Afternoon")}
+  else if(hour<6){setGreet("It's too late, time for sleep")}
+  }
 
   async function getExercises() {
     const result = await fetch(process.env.REACT_APP_HOST_URL+"/exercise/getexercise", {
@@ -44,13 +48,11 @@ export default function Dashboard() {
     });
     const data = await result.json();
     const exercises = data.exercises;
-    // setLoggedName(data.name);
-    // console.log(data);
-    // console.log(exercises);
     setExercises(exercises);
   }
 
   useEffect(() => {
+    hour();
     getExercises();
   }, []);
 
@@ -65,7 +67,7 @@ export default function Dashboard() {
           component="h4"
           mb={1}
         >
-          Good morning, <strong>{loggedName}</strong>
+          {greet}, <strong>{loggedName}</strong>
         </Typography>
         <Typography
           fontFamily="'Montserrat', sans-serif"
@@ -107,10 +109,10 @@ export default function Dashboard() {
 
           </div>
         :
-        <Grid container spacing={4}>
+        <Grid container spacing={9}>
         {exercises.map((exercise)=>{
           return(
-            <Grid item xs={4} key={exercise._id}>
+            <Grid item s={4} key={exercise._id}>
             {console.log(exercise._id)}
             <BasicCard title={exercise.title} des={exercise.des} type={exercise.type} duration={exercise.duration} handleEdit={`/editexercise/${exercise._id}`} handleDelete={()=>{onDelete(exercise._id)}} />
             </Grid>

@@ -3,14 +3,12 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import  AddExercise  from "./pages/AddExercise";
 import  EditExercise  from "./pages/EditExercise";
 import  Dashboard  from "./pages/Dashboard";
-import  Home  from "./pages/Home";
 import  Login  from "./pages/Login";
 import  NotFound  from "./pages/NotFound";
 import  Register  from "./pages/Register";
 import  Navigation  from "./components/Navigation";
-import Topbar from "./pages/global/Topbar";
-import Sidebar from "./pages/global/Sidebar";
 import './index.css';
+import Toolbar from "./components/Toolbar";
 
 function App() {
 
@@ -33,7 +31,8 @@ function App() {
 
       {login ?
       <>
-      <Navigation login={login}/>
+      {/* <Toolbar/> */}
+      <Navigation/>
       <main className="content">
       {/* <Topbar/> */}
         <Routes>

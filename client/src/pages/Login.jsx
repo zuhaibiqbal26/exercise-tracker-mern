@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../index.css';
-import background from "../media/bg.png"
+// import background from "../media/bg.png"
 import logo from "../media/logo2.png";
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom';

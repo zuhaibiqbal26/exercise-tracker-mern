@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -19,7 +18,7 @@ import { Link } from 'react-router-dom';
 
     return (
      
-      <Card sx={{ minWidth: 200, backgroundColor:"#F02632", color:"white", borderRadius:"15px", padding:"10px 20px 20px 10px" }}>
+      <Card sx={{ width: 300, backgroundColor:"#F02632", color:"white", borderRadius:"15px", padding:"10px 20px 20px 10px" }}>
         <CardContent>
           
           <Typography fontFamily="'Montserrat', sans-serif" fontWeight={700} variant="h5" component="div">

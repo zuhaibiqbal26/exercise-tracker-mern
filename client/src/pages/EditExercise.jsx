@@ -5,10 +5,6 @@ import { useParams } from 'react-router-dom';
 
 
 export default function EditExercise() {
-    const [title, setTitle] = useState("")
-    const [des, setDes] = useState("")
-    const [type, setType] = useState("")
-    const [duration, setDuration] = useState("")
     const [state, setState] = useState({
         title:'',
         des:'',
@@ -50,7 +46,7 @@ export default function EditExercise() {
 
 useEffect(()=>{
     fetchExercise(id)
-},[])
+},[id])
 
     async function handleSubmit(e){
         e.preventDefault()
@@ -87,7 +83,21 @@ useEffect(()=>{
         <Typography fontFamily="'Montserrat', sans-serif" color="white" fontWeight="400" variant="p" component="p" mb={4}>to track and manage your healthy life</Typography>
         <input defaultValue={state.title} placeholder='Title' value={state.title} onChange={(e)=>setState({...state, title: e.target.value})} /><br/>
         <input defaultValue={state.des} placeholder='Description' value={state.des} onChange={(e)=>{setState({...state, des: e.target.value})}} /><br/>
-        <input defaultValue={state.type} placeholder='Type' value={state.type} onChange={(e)=>{setState({...state, type: e.target.value})}} /><br/>
+        <select
+          name="cars"
+          id="cars"
+          value={state.type}
+          placeholder="Exercise Type"
+          onChange={(e)=>{setState({...state, type: e.target.value})}}
+        >
+            <option value="" disabled selected hidden>Choose an exercise type</option>
+          <option value="Running">Running</option>
+          <option value="Walking">Walking</option>
+          <option value="Cycling">Cycling</option>
+          <option value="Swimming">Swimming</option>
+          <option value="Hiking">Hiking</option>
+        </select>
+        <br/>
         <input defaultValue={state.duration} placeholder='Duration' type="number" value={state.duration} onChange={(e)=>{setState({...state, duration: e.target.value})}} /><br/>
         <input className='addBtn' type="submit" value="EDIT EXERCISE" />
     </form>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../index.css';
-import background from "../media/bg.png"
+// import background from "../media/bg.png"
 import logo from "../media/logo2.png";
 import { Typography } from '@mui/material';
 import {Link} from 'react-router-dom';
@@ -40,7 +40,7 @@ export default function Register() {
     <div className='login' >
         <div className='contentLogin'>
 
-        <img src={logo}/>
+        <img src={logo} alt="logo"/>
     <form className='form' onSubmit={handleSubmit}>
         <Typography fontFamily="'Montserrat', sans-serif" fontWeight="700" variant="h4" component="h4">REGISTER NOW</Typography>
         <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" variant="p" component="p" mb={4}>to track and manage your healthy life</Typography>

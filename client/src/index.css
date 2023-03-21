@@ -109,12 +109,21 @@ body,
   border-radius: 20px;
 }
 
-.addform input {
+.addform input, .addform select {
   width: 328px;
   border-radius: 36px;
   border: 1px solid #0000004d;
   height: 40px;
   padding: 2px 20px;
+}
+
+.addform input:focus, .addform select:focus {
+  outline: none;
+}
+
+.addform select {
+  width: 368px;
+  padding: 2px 16px;
 }
 
 .addBtn {
@@ -206,4 +215,13 @@ body,
   background-color: white;
   border-radius: 30px;
   font-weight: 700 !important;
+}
+
+.toolbar{
+  background-color: #222f3e;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
 }
