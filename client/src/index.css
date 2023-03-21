@@ -13,12 +13,13 @@ body,
 }
 
 .app {
-  display: flex;
-  position: relative;
+  /* display: flex; */
+  /* position: relative; */
+  
 }
 
 .content {
-  margin-left: 275px;
+  /* margin-left: 275px; */
 }
 
 /* Scrollbar */
@@ -42,7 +43,7 @@ body,
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 90vh; */
+  height: 100vh;
   justify-content: center;
   align-items: center;
   background: url("./media/bg.png") center center no-repeat;
@@ -196,32 +197,170 @@ body,
 .navli {
   color: white;
   display: flex;
-  align-items: center;
-  width: 215px;
+  /* align-items: center; */
+  /* width: 215px; */
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 15px;
+  /* padding: 8px 15px; */
 }
 
 .navli:hover{
-    color: #ffffff !important;
+    /* color: #ffffff !important;
   background-color: rgba(255, 255, 255, 0.21);
-  border-radius: 30px;
+  border-radius: 30px; */
   /* font-weight: 700 !important; */
 }
 
 .active {
   color: #f02632 !important;
   background-color: white;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   font-weight: 700 !important;
 }
 
 .toolbar{
-  background-color: #222f3e;
+  background-color: #f02632;
   color: white;
   display: flex;
   gap: 1rem;
   align-items: center;
   padding: 1rem;
+}
+
+.navigation{
+  display: flex;
+  width: 275px;
+  background-color: #f02632;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: none;
+}
+
+.sidebar{
+  position: absolute;
+  background-color: #f02632;
+  color: white;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  transform: translateX(-100%);
+  transition: all 0.4s;
+  z-index: 10;
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 1rem 2rem;
+  border-bottom: solid rgba(255,255,255,0.1) 1px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.sidebar li:hover{
+  background-color: white;
+  color: #f02632;
+  font-weight: 600;
+}
+
+.sidebar--open{
+  transform: translateX(0%);
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9;
+}
+
+.backdrop--open{
+  display: block;
+}
+
+.logoSidebar{
+  display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  .form {
+    background-color: white;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .form input {
+    width: 280px;
+    border-radius: 36px;
+    border: 1px solid #0000004d;
+    height: 30px;
+    padding: 2px 15px;
+  }
+
+  .formBtn {
+    background-color: #f02632;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 2px 20px;
+    width: 310px !important;
+    height: 34px !important;
+    border: none !important;
+    cursor: pointer;
+  }
+
+  .css-9qgcmy-MuiGrid-root>.MuiGrid-item{
+    padding-left: 22px !important;
+  }
+
+  .addform {
+    background-color: #f02632;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  
+  .addform input, .addform select {
+    width: 280px;
+    height: 30px;
+    padding: 2px 15px;
+  }
+  
+  
+  .addform select {
+    width: 310px;
+    padding: 4px 12px;
+  }
+  
+  .addBtn {
+    padding: 2px 20px;
+    width: 310px !important;
+    height: 34px !important;
+  }
+
+  .addEx{
+    justify-content: start;
+    margin-top: 150px;
+  }
 }

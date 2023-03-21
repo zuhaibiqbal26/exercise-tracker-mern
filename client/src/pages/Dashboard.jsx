@@ -103,16 +103,16 @@ export default function Dashboard() {
         >
           Nothing to show
         </Typography>
-        <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" variant="p" component="p" mb={2}>Add your first exercise to track and manage your healthy life</Typography>
+        <Typography fontFamily="'Montserrat', sans-serif" fontWeight="400" variant="p" component="p" textAlign="center" mb={2}>Add your first exercise to track and manage your healthy life</Typography>
       <button className='addBtn2'><Link to="/addexercise" className="btnLink">ADD EXERCISE</Link></button>
 
 
           </div>
         :
-        <Grid container spacing={9}>
+        <Grid container paddingLeft={0} spacing={4}>
         {exercises.map((exercise)=>{
           return(
-            <Grid item s={4} key={exercise._id}>
+            <Grid item paddingLeft={0} s={4} key={exercise._id}>
             {console.log(exercise._id)}
             <BasicCard title={exercise.title} des={exercise.des} type={exercise.type} duration={exercise.duration} handleEdit={`/editexercise/${exercise._id}`} handleDelete={()=>{onDelete(exercise._id)}} />
             </Grid>

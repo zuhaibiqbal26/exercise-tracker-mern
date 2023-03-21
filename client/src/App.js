@@ -9,10 +9,19 @@ import  Register  from "./pages/Register";
 import  Navigation  from "./components/Navigation";
 import './index.css';
 import Toolbar from "./components/Toolbar";
+import Backdrop from "./components/Backdrop";
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 function App() {
 
   const [login, setLogin] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  isOpen ? disableBodyScroll(document) : enableBodyScroll(document)
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
 
   useEffect(()=>{
     const Token = localStorage.getItem("Token")
@@ -27,14 +36,13 @@ function App() {
   return (
       <BrowserRouter>
     <div className="app">
-      {/* <Sidebar/> */}
 
       {login ?
       <>
-      {/* <Toolbar/> */}
-      <Navigation/>
+      <Toolbar openSidebar={toggleSidebar}/>
+      <Backdrop isOpen={isOpen} closeSidebar={toggleSidebar}/>
+      <Navigation isOpen={isOpen}/>
       <main className="content">
-      {/* <Topbar/> */}
         <Routes>
           {/* <Route path="/" element={<Home/>}></Route> */}
           <Route path="/" element={<Dashboard/>}></Route>
