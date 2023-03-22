@@ -311,20 +311,13 @@ body,
     width: 280px;
     border-radius: 36px;
     border: 1px solid #0000004d;
-    height: 30px;
+    height: 40px;
     padding: 2px 15px;
   }
 
   .formBtn {
-    background-color: #f02632;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
     padding: 2px 20px;
     width: 310px !important;
-    height: 34px !important;
-    border: none !important;
-    cursor: pointer;
   }
 
   .css-9qgcmy-MuiGrid-root>.MuiGrid-item{
@@ -343,7 +336,7 @@ body,
   
   .addform input, .addform select {
     width: 280px;
-    height: 30px;
+    height: 40px;
     padding: 2px 15px;
   }
   
@@ -356,7 +349,7 @@ body,
   .addBtn {
     padding: 2px 20px;
     width: 310px !important;
-    height: 34px !important;
+    height: 44px !important;
   }
 
   .addEx{
