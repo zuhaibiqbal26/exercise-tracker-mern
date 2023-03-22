@@ -4,7 +4,7 @@ import logo from "../media/logo.png";
 export default function Toolbar({openSidebar}) {
     return (
     <div className="toolbar">
-        <div className="burger">
+        <div className="burger" style={{cursor: "pointer"}}>
           <MenuIcon fontSize='large' onClick={openSidebar}/>
         </div>
         <div className="title"> <img src={logo} alt="logo"/></div>
