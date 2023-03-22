@@ -101,7 +101,7 @@ export default function AddExercise() {
         </select>
         <br/>
         <input
-          placeholder="Duration"
+          placeholder="Duration (in minutes)"
           type="number"
           value={duration}
           onChange={(e) => {

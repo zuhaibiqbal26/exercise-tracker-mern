@@ -98,7 +98,7 @@ useEffect(()=>{
           <option value="Hiking">Hiking</option>
         </select>
         <br/>
-        <input defaultValue={state.duration} placeholder='Duration' type="number" value={state.duration} onChange={(e)=>{setState({...state, duration: e.target.value})}} /><br/>
+        <input defaultValue={state.duration} placeholder='Duration (in minutes)' type="number" value={state.duration} onChange={(e)=>{setState({...state, duration: e.target.value})}} /><br/>
         <input className='addBtn' type="submit" value="EDIT EXERCISE" />
     </form>
     </div>
